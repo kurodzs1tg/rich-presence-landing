@@ -44,9 +44,9 @@ export default function App() {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
-    const timer1 = setTimeout(() => setShowDescription(true), 2000);
-    const timer2 = setTimeout(() => setShowFeatures(true), 4000);
-    const timer3 = setTimeout(() => setShowFooter(true), 5000);
+    const timer1 = setTimeout(() => setShowDescription(true), 1300);
+    const timer2 = setTimeout(() => setShowFeatures(true), 2400);
+    const timer3 = setTimeout(() => setShowFooter(true), 3200);
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
@@ -65,7 +65,7 @@ export default function App() {
       <motion.div 
         initial={{ opacity: 0, scale: 0.98 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.45 }}
         className="terminal-container w-full max-w-3xl border border-zinc-800 rounded-lg bg-zinc-950 flex flex-col z-10 overflow-hidden"
       >
         {/* Terminal Window Header */}
@@ -87,7 +87,7 @@ export default function App() {
           <div className="space-y-3 w-full">
             <div className="text-zinc-600 text-sm">$ initialize --service rich_presence</div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white">
-              <Typewriter text="Rich Presence Manager" />
+              <Typewriter text="Rich Presence Manager" speed={0.03} />
             </h1>
           </div>
 
@@ -95,7 +95,7 @@ export default function App() {
             <div className="space-y-2 w-full">
               <div className="text-zinc-600 text-sm">$ status --get bio_status</div>
               <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed">
-                <Typewriter text="Trang chỉnh sửa bio hoàn hảo của bạn" speed={0.03} />
+                <Typewriter text="Trang chỉnh sửa bio hoàn hảo của bạn" speed={0.022} />
               </p>
             </div>
           )}
@@ -141,7 +141,7 @@ export default function App() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col items-center"
           >
             <div className="h-[1px] w-32 bg-zinc-800 mb-6" />
